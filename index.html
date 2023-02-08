@@ -10,9 +10,12 @@
         li{
             color:darksalmon;
         }
-        #fruits{
+        #fruits-title{
                 color:black;
             }
+        .fruits-container li{
+            color:aqua;
+        };
     </style>
 </head>
 <body>
@@ -30,7 +33,7 @@
                 <li>Dom de re baba</li>
             </ul>
         </section>
-        <section>
+        <section class="fruits-container" >
             <h1 id="fruits-title">My favorite Fruits</h1>
             <ul>
                 <li>Apple</li>
@@ -66,6 +69,11 @@
        }
        const  fruitsTitle = document.getElementById('fruits-title');
        fruitsTitle.innerText = 'Fruits changed by javaScript';
+       const someLi = document.querySelectorAll('.fruits-container li'); 
+       console.log(someLi);
+       for(const li of someLi){
+        console.log(li.innerText);
+       }
     </script>
 </body>
 </html>
