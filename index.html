@@ -53,6 +53,8 @@
     </main>
     <script src="js/dom.js"></script>
     <script>
+
+        //option -getElementsByTagName();
         const liCollection = document.getElementsByTagName('li');
         // console.log(liCollection);
         for(const li of liCollection){
@@ -67,8 +69,12 @@
        for(const place of places){
         console.log(place.innerText);
        }
-       const  fruitsTitle = document.getElementById('fruits-title');
+
+       // option getElementById()
+    const  fruitsTitle = document.getElementById('fruits-title').style.color ='red';
        fruitsTitle.innerText = 'Fruits changed by javaScript';
+
+       //potion- querySelector
        const someLi = document.querySelectorAll('.fruits-container li'); 
        console.log(someLi);
        for(const li of someLi){
