@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toure of DOM</title>
+    <link rel="stylesheet" href="/style.css/style.css">
+    <style>
+        li{
+            color:darksalmon;
+        }
+        #fruits{
+                color:black;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, corporis ducimus. Dicta cupiditate corporis excepturi eos fugiat quia ducimus temporibus!</p>
+    </header>
+    <main>
+        <section>
+            <h1> My awesome DOM </h1>
+            <ul>
+                <li>jalali set</li>
+                <li>Shafayet</li>
+                <li>bonobash</li>
+                <li>Dom de re baba</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="fruits-title">My favorite Fruits</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Orange</li>
+                <li>Watermelon</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="place-title"> visit the place</h1>
+            <ul>
+                <li class="important">sundorban</li>
+                <li class="important">Cataban</li>
+                <li class="important">bandorban</li>
+                <li class="other-place">salbon</li>
+            </ul>
+        </section>
+    </main>
+    <script src="js/dom.js"></script>
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+        for(const li of liCollection){
+            //console.log(li);
+        }
+        const allHeadings = document.getElementsByTagName('h1');
+        for(const h1 of allHeadings){
+            //console.log(h1.innerText);
+        }
+       const list = document.getElementById('place-title').innerText = 'My tour list';
+       const places = document.getElementsByClassName('important');
+       for(const place of places){
+        console.log(place.innerText);
+       }
+       const  fruitsTitle = document.getElementById('fruits-title');
+       fruitsTitle.innerText = 'Fruits changed by javaScript';
+    </script>
+</body>
+</html>
