@@ -41,7 +41,7 @@
                 <li>Watermelon</li>
             </ul>
         </section>
-        <section>
+        <section id="places-container">
             <h1 id="place-title"> visit the place</h1>
             <ul>
                 <li class="important-title">sundorban</li>
@@ -52,6 +52,7 @@
         </section>
     </main>
     <script src="js/dom.js"></script>
+    <script src="js/js-style.js"></script>
     <script>
 
         //option -getElementsByTagName();
@@ -67,7 +68,7 @@
        const list = document.getElementById('place-title').innerText = 'My tour list';
        const places = document.getElementsByClassName('important');
        for(const place of places){
-        console.log(place.innerText);
+        //console.log(place.innerText);
        }
 
        // option getElementById()
@@ -76,9 +77,9 @@
 
        //potion- querySelector
        const someLi = document.querySelectorAll('.fruits-container li'); 
-       console.log(someLi);
+       //console.log(someLi);
        for(const li of someLi){
-        console.log(li.innerText);
+        //console.log(li.innerText);
        }
     </script>
 </body>
